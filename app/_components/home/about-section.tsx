@@ -9,7 +9,7 @@ export function AboutSection() {
             <div className="absolute -left-4 -top-4 h-24 w-24 border-l border-t border-border" />
             <div className="photo-shell aspect-[4/5] rounded-2xl shadow-xl">
               <Image
-                src="/images/konjed-about.jpg"
+                src="/images/konjed-about.webp"
                 alt="Konjed by the window"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

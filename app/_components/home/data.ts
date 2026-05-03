@@ -8,27 +8,27 @@ export const quickFacts = [
 
 export const galleryImages = [
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_7836-yidCqJyOvhIEhgdzd9yRbhJcinxi26.jpg",
+    src: "/images/IMG_7836.webp",
     alt: "Konjed relaxing on desk",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_6767-yeXt8UqTYKoaNHA8D9ReXl5VeVuN0s.jpg",
+    src: "/images/IMG_6767.webp",
     alt: "Konjed under chair",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_6761-juQvAS4O0omhoSXgwXdBqYuQMLJfrr.jpg",
+    src: "/images/IMG_6761.webp",
     alt: "Konjed stretching",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8863-VUVTgss9pB82fdHDXsM3dsvBtcESGa.jpg",
+    src: "/images/IMG_8863.webp",
     alt: "Konjed on couch",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_7944-g8KQFkQGLps7VuAi1jzNZE41giokqc.jpg",
+    src: "/images/IMG_7944.webp",
     alt: "Konjed portrait",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_6782-98fmhwhaCsBawEsblTAapjdx0zveez.jpg",
+    src: "/images/IMG_6782.webp",
     alt: "Konjed at window",
   },
 ];

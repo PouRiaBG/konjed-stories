@@ -56,7 +56,7 @@ export function HeroSection() {
           <div className="absolute -inset-5 -z-10 rounded-[2rem] bg-muted" />
           <div className="photo-shell aspect-4/5 rounded-[1.75rem] shadow-2xl">
             <Image
-              src="/images/konjed-hero.jpg"
+              src="/images/konjed-hero.webp"
               alt="Konjed relaxing on desk"
               fill
               priority
