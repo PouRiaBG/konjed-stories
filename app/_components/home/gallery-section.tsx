@@ -36,13 +36,13 @@ export function GallerySection() {
         </div>
 
         <div className="relative mb-8">
-          <div className="rounded-[1.75rem] overflow-hidden shadow-2xl relative h-[420px] md:h-[620px] bg-foreground/5">
+          <div className="photo-shell rounded-[1.75rem] shadow-2xl relative h-[420px] md:h-[620px]">
             <Image
               src={galleryImages[currentSlide].src}
               alt={galleryImages[currentSlide].alt}
               fill
               sizes="(max-width: 768px) 100vw, 960px"
-              className="object-cover"
+              className="photo-polish object-cover"
             />
           </div>
 
@@ -95,7 +95,7 @@ export function GallerySection() {
                 width={160}
                 height={80}
                 sizes="(max-width: 640px) 33vw, 160px"
-                className="w-full h-20 object-cover block"
+                className="photo-polish w-full h-20 object-cover block"
               />
             </button>
           ))}

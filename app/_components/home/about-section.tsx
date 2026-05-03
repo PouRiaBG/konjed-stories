@@ -7,14 +7,15 @@ export function AboutSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="relative">
             <div className="absolute -left-4 -top-4 h-24 w-24 border-l border-t border-border" />
-            <Image
-              src="/images/konjed-about.jpg"
-              alt="Konjed by the window"
-              width={4032}
-              height={3024}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="w-full rounded-2xl shadow-xl"
-            />
+            <div className="photo-shell aspect-[4/5] rounded-2xl shadow-xl">
+              <Image
+                src="/images/konjed-about.jpg"
+                alt="Konjed by the window"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="photo-polish object-cover object-[50%_52%]"
+              />
+            </div>
           </div>
           <div>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-accent">

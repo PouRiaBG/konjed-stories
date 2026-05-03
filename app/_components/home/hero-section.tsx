@@ -54,15 +54,16 @@ export function HeroSection() {
         </div>
         <div className="relative">
           <div className="absolute -inset-5 -z-10 rounded-[2rem] bg-muted" />
-          <Image
-            src="/images/konjed-hero.jpg"
-            alt="Konjed relaxing on desk"
-            width={4032}
-            height={3024}
-            priority
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="w-full h-auto block rounded-[1.75rem] shadow-2xl"
-          />
+          <div className="photo-shell aspect-4/5 rounded-[1.75rem] shadow-2xl">
+            <Image
+              src="/images/konjed-hero.jpg"
+              alt="Konjed relaxing on desk"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="photo-polish object-cover object-[50%_58%]"
+            />
+          </div>
         </div>
       </div>
     </section>
