@@ -2,14 +2,16 @@
 
 :root {
   color-scheme: light;
-  --background: #fffaf4;
-  --foreground: #201a17;
-  --card: #ffffff;
-  --muted: #efe7db;
-  --muted-foreground: #6f625b;
-  --accent: #506b5b;
+  --background: #f8f3eb;
+  --foreground: #211c18;
+  --card: #fffdf8;
+  --muted: #e8dfd2;
+  --muted-foreground: #6f6459;
+  --accent: #355746;
   --accent-foreground: #ffffff;
-  --border: #e0d6c8;
+  --accent-soft: #dce8dd;
+  --clay: #9d6f54;
+  --border: #ded2c2;
 }
 
 @theme inline {
@@ -20,6 +22,8 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-clay: var(--clay);
   --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -57,5 +61,14 @@ html {
 }
 
 .photo-polish {
-  filter: saturate(1.06) contrast(1.04) brightness(1.02);
+  filter: saturate(1.04) contrast(1.05) brightness(1.02);
+}
+
+.section-eyebrow {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  text-transform: uppercase;
 }

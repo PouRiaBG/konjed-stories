@@ -5,44 +5,43 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-[94svh] flex items-center justify-center px-6 pt-28 pb-16 bg-background"
+      className="relative isolate flex min-h-[96svh] items-center justify-center overflow-hidden px-5 pb-16 pt-28 sm:px-6"
     >
-      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-[0.9fr_1fr] gap-10 lg:gap-16 items-center">
-        <div>
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-accent">
-            Cream coat, big presence
-          </p>
-          <h1 className="text-5xl md:text-7xl font-bold mb-5 leading-tight text-balance text-foreground">
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,#f8f3eb_0%,#f8f3eb_48%,#dce8dd_48%,#dce8dd_100%)]" />
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 md:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="max-w-2xl">
+          <p className="section-eyebrow mb-5">Cream coat, big presence</p>
+          <h1 className="mb-6 text-5xl font-bold leading-tight text-balance text-foreground md:text-7xl">
             Meet Konjed
           </h1>
-          <p className="text-xl md:text-2xl text-foreground/80 mb-6 leading-relaxed text-balance">
+          <p className="mb-6 text-xl leading-relaxed text-foreground/80 text-balance md:text-2xl">
             The most charming British Shorthair from Tehran, Iran.
           </p>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl">
+          <p className="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
             With stunning blue-green eyes and a luxurious cream coat, Konjed
             brings joy and elegance to every moment.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-3">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href="#gallery"
-              className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground shadow-sm transition hover:bg-foreground"
+              className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground shadow-sm transition hover:-translate-y-0.5 hover:bg-foreground"
             >
               View Gallery
             </a>
             <a
               href="#about"
-              className="inline-flex items-center justify-center rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition hover:border-foreground"
+              className="inline-flex items-center justify-center rounded-full border border-border bg-card/85 px-6 py-3 text-sm font-semibold text-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-foreground"
             >
               Read His Story
             </a>
           </div>
-          <dl className="mt-10 grid grid-cols-3 gap-3 max-w-xl">
+          <dl className="mt-10 grid max-w-xl grid-cols-1 gap-3 sm:grid-cols-3">
             {quickFacts.map((fact) => (
               <div
                 key={fact.label}
-                className="border-l border-border pl-4 first:border-l-0 first:pl-0"
+                className="rounded-lg border border-border bg-card/60 p-4 shadow-sm sm:border-l sm:bg-transparent sm:shadow-none"
               >
-                <dt className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
                   {fact.label}
                 </dt>
                 <dd className="mt-1 text-sm font-semibold text-foreground">
@@ -53,8 +52,8 @@ export function HeroSection() {
           </dl>
         </div>
         <div className="relative">
-          <div className="absolute -inset-5 -z-10 rounded-[2rem] bg-muted" />
-          <div className="photo-shell aspect-4/5 rounded-[1.75rem] shadow-2xl">
+          <div className="absolute -inset-3 -z-10 rounded-[2rem] border border-card/70 bg-card/40" />
+          <div className="photo-shell aspect-[4/5] rounded-[1.75rem] shadow-2xl md:aspect-[5/6]">
             <Image
               src="/images/konjed-hero.webp"
               alt="Konjed relaxing on desk"
@@ -63,6 +62,14 @@ export function HeroSection() {
               sizes="(max-width: 768px) 100vw, 50vw"
               className="photo-polish object-cover object-[50%_58%]"
             />
+          </div>
+          <div className="absolute bottom-5 left-5 right-5 rounded-lg border border-card/70 bg-card/90 p-4 shadow-lg backdrop-blur">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+              Current specialty
+            </p>
+            <p className="mt-1 text-sm font-semibold text-foreground">
+              Supervising the desk with excellent calm.
+            </p>
           </div>
         </div>
       </div>

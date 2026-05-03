@@ -7,21 +7,24 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-background/85 backdrop-blur-md border-b border-border/70 z-50 px-6 py-4">
-      <nav className="relative max-w-6xl mx-auto flex justify-between items-center">
+    <header className="fixed top-0 left-0 right-0 z-50 px-4 py-3">
+      <nav className="relative mx-auto flex max-w-7xl items-center justify-between rounded-full border border-border/80 bg-card/85 px-4 py-3 shadow-sm backdrop-blur-md">
         <a
           href="#home"
-          className="text-xl font-bold tracking-tight text-foreground"
+          className="flex items-center gap-3 text-lg font-bold tracking-tight text-foreground"
           onClick={() => setIsMenuOpen(false)}
         >
-          Konjed
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-sm text-accent-foreground">
+            K
+          </span>
+          <span>Konjed</span>
         </a>
-        <ul className="hidden md:flex gap-8 list-none">
+        <ul className="hidden list-none items-center gap-1 rounded-full bg-muted/50 p-1 md:flex">
           {navItems.map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}
-                className="text-muted-foreground text-sm font-medium hover:text-foreground transition-colors"
+                className="rounded-full px-4 py-2 text-sm font-semibold text-muted-foreground transition hover:bg-card hover:text-foreground"
               >
                 {item}
               </a>
@@ -30,7 +33,7 @@ export function Header() {
         </ul>
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-sm transition hover:border-foreground md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-foreground shadow-sm transition hover:border-foreground md:hidden"
           aria-controls="mobile-menu"
           aria-expanded={isMenuOpen}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -60,7 +63,7 @@ export function Header() {
         {isMenuOpen ? (
           <div
             id="mobile-menu"
-            className="absolute left-0 right-0 top-14 rounded-2xl border border-border bg-card p-2 shadow-xl md:hidden"
+            className="absolute left-0 right-0 top-16 rounded-2xl border border-border bg-card p-2 shadow-xl md:hidden"
           >
             <ul className="list-none">
               {navItems.map((item) => (
