@@ -74,43 +74,32 @@ export function GallerySection() {
             &#8594;
           </button>
 
-          <div className="absolute right-5 top-5 flex gap-2 rounded-full bg-background/70 p-2 backdrop-blur">
-            {galleryImages.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`h-3 rounded-full border-none cursor-pointer transition-all ${
-                  currentSlide === index
-                    ? "w-10 bg-foreground"
-                    : "w-3 bg-background/70"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
-          {galleryImages.map((image, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`cursor-pointer overflow-hidden rounded-lg bg-transparent p-0 transition-all ${
-                currentSlide === index
-                  ? "ring-2 ring-foreground opacity-100"
-                  : "ring-2 ring-transparent opacity-60 hover:opacity-100"
-              }`}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={160}
-                height={80}
-                sizes="(max-width: 640px) 33vw, 160px"
-                className="photo-polish block h-20 w-full object-cover"
-              />
-            </button>
-          ))}
+        <div className="overflow-x-auto rounded-lg border border-border bg-card/60 p-3 [scrollbar-width:thin]">
+          <div className="flex w-max gap-3">
+            {galleryImages.map((image, index) => (
+              <button
+                key={image.src}
+                onClick={() => setCurrentSlide(index)}
+                className={`h-24 w-24 flex-none cursor-pointer overflow-hidden rounded-lg bg-muted p-0 transition-all sm:h-28 sm:w-36 ${
+                  currentSlide === index
+                    ? "ring-2 ring-foreground opacity-100"
+                    : "ring-2 ring-transparent opacity-65 hover:opacity-100"
+                }`}
+                aria-label={`Show ${image.caption}`}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={180}
+                  height={112}
+                  sizes="(max-width: 640px) 96px, 144px"
+                  className="photo-polish block h-full w-full object-cover"
+                />
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </section>

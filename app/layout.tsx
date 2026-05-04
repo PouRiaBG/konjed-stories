@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 900,
-        alt: "Konjed, a cream British Shorthair cat relaxing on a desk",
+        alt: "Konjed, a cream British Shorthair cat loafing on a patterned rug",
       },
     ],
     locale: siteConfig.locale,
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        alt: "Konjed, a cream British Shorthair cat relaxing on a desk",
+        alt: "Konjed, a cream British Shorthair cat loafing on a patterned rug",
       },
     ],
   },
@@ -75,9 +75,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  icons: {
-    icon: "/favicon.ico",
   },
   formatDetection: {
     email: false,

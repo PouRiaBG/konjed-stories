@@ -1,5 +1,6 @@
 import { AboutSection } from "./_components/home/about-section";
 import { Footer } from "./_components/home/footer";
+import { FunFactsSection } from "./_components/home/fun-facts-section";
 import { GallerySection } from "./_components/home/gallery-section";
 import { Header } from "./_components/home/header";
 import { HeroSection } from "./_components/home/hero-section";
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutSection />
       <SignatureSection />
       <GallerySection />
+      <FunFactsSection />
       <Footer />
     </main>
   );

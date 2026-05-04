@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Konjed cat icon">
+  <rect width="512" height="512" rx="112" fill="#355746" />
+  <path
+    d="M124 219c-14-70 3-123 23-150 39 13 73 42 94 74 10-1 20-2 31-2s21 1 31 2c21-32 55-61 94-74 20 27 37 80 23 150 23 31 34 69 34 108 0 91-74 143-182 143S90 418 90 327c0-39 11-77 34-108Z"
+    fill="#F6E9CF"
+  />
+  <path
+    d="M154 103c23 11 43 29 59 51-28 12-50 31-67 55-7-43 0-79 8-106Zm236 0c8 27 15 63 8 106-17-24-39-43-67-55 16-22 36-40 59-51Z"
+    fill="#E5CBA3"
+  />
+  <circle cx="199" cy="292" r="38" fill="#2F6F66" />
+  <circle cx="345" cy="292" r="38" fill="#2F6F66" />
+  <circle cx="211" cy="279" r="11" fill="#FFFFFF" opacity=".92" />
+  <circle cx="357" cy="279" r="11" fill="#FFFFFF" opacity=".92" />
+  <ellipse cx="272" cy="350" rx="24" ry="18" fill="#B77568" />
+  <path
+    d="M254 380c10 12 26 12 36 0M160 355c-34-11-67-12-101-3M158 383c-31 2-60 10-87 25M384 355c34-11 67-12 101-3M386 383c31 2 60 10 87 25"
+    fill="none"
+    stroke="#5A4A3F"
+    stroke-width="16"
+    stroke-linecap="round"
+  />
+  <path
+    d="M212 234c-22-14-53-13-76 4M332 234c22-14 53-13 76 4"
+    fill="none"
+    stroke="#5A4A3F"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+</svg>

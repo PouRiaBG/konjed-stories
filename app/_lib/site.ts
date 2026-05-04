@@ -7,6 +7,6 @@ export const siteConfig = {
   description:
     "Meet Konjed, a charming cream British Shorthair cat from Tehran with blue-green eyes, cozy photo stories, and quiet everyday adventures.",
   url: siteUrl,
-  ogImage: "/images/konjed-hero.webp",
+  ogImage: "/images/Konjed-images/IMG_5647.webp",
   locale: "en_US",
 };

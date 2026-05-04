@@ -55,12 +55,12 @@ export function HeroSection() {
           <div className="absolute -inset-3 -z-10 rounded-[2rem] border border-card/70 bg-card/40" />
           <div className="photo-shell aspect-[4/5] rounded-[1.75rem] shadow-2xl md:aspect-[5/6]">
             <Image
-              src="/images/konjed-hero.webp"
-              alt="Konjed relaxing on desk"
+              src="/images/Konjed-images/IMG_5647.webp"
+              alt="Konjed loafing on a patterned rug"
               fill
               priority
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="photo-polish object-cover object-[50%_58%]"
+              className="photo-polish object-cover object-[50%_52%]"
             />
           </div>
           <div className="absolute bottom-5 left-5 right-5 rounded-lg border border-card/70 bg-card/90 p-4 shadow-lg backdrop-blur">
@@ -68,7 +68,7 @@ export function HeroSection() {
               Current specialty
             </p>
             <p className="mt-1 text-sm font-semibold text-foreground">
-              Supervising the desk with excellent calm.
+              Loafing on the rug with excellent calm.
             </p>
           </div>
         </div>
