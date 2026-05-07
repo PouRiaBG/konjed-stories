@@ -12,14 +12,15 @@ export function HeroSection() {
         <div className="max-w-2xl">
           <p className="section-eyebrow mb-5">Cream coat, big presence</p>
           <h1 className="mb-6 text-5xl font-bold leading-tight text-balance text-foreground md:text-7xl">
-            Meet Konjed
+            Konjed the British Shorthair Cat
           </h1>
           <p className="mb-6 text-xl leading-relaxed text-foreground/80 text-balance md:text-2xl">
-            The most charming British Shorthair from Tehran, Iran.
+            A cream British cat from Tehran, Iran, with blue-green eyes and a
+            very serious loafing practice.
           </p>
           <p className="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            With stunning blue-green eyes and a luxurious cream coat, Konjed
-            brings joy and elegance to every moment.
+            Follow cozy cat photos, small pet stories, and quiet British
+            Shorthair moments at home.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
@@ -56,7 +57,7 @@ export function HeroSection() {
           <div className="photo-shell aspect-[4/5] rounded-[1.75rem] shadow-2xl md:aspect-[5/6]">
             <Image
               src="/images/Konjed-images/IMG_5647.webp"
-              alt="Konjed loafing on a patterned rug"
+              alt="Konjed the cream British Shorthair cat loafing on a patterned rug"
               fill
               priority
               sizes="(max-width: 768px) 100vw, 50vw"

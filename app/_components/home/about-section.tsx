@@ -10,7 +10,7 @@ export function AboutSection() {
             <div className="photo-shell aspect-[4/5] rounded-[1.25rem] shadow-xl">
               <Image
                 src="/images/konjed-about.webp"
-                alt="Konjed by the window"
+                alt="Konjed the British Shorthair cat by a window in Tehran"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="photo-polish object-cover object-[50%_52%]"
@@ -20,7 +20,7 @@ export function AboutSection() {
           <div>
             <p className="section-eyebrow mb-5">About Konjed</p>
             <h2 className="mb-6 text-4xl font-bold text-foreground text-balance md:text-5xl">
-              A Star from Tehran
+              A cream British cat from Tehran
             </h2>
             <p className="mb-5 text-lg leading-relaxed text-foreground/80">
               Konjed is a beautiful British Shorthair cat living in Tehran,
@@ -31,7 +31,7 @@ export function AboutSection() {
             <p className="text-base leading-relaxed text-muted-foreground">
               Whether he&apos;s lounging by the window watching the city skyline
               or playfully stretching on his favorite rug, Konjed brings warmth
-              and charm to every moment.
+              and charm to every cat photo and everyday pet story.
             </p>
             <div className="mt-8 border-l-2 border-accent pl-5">
               <p className="text-2xl font-semibold leading-snug text-foreground text-balance">

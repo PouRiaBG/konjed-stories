@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { siteConfig } from "./_lib/site";
+import { absoluteUrl, seoKeywords, siteConfig } from "./_lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,20 +23,16 @@ export const metadata: Metadata = {
   applicationName: siteConfig.name,
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
-  keywords: [
-    "Konjed",
-    "Konjed Stories",
-    "British Shorthair",
-    "cream British Shorthair",
-    "cat photography",
-    "Tehran cat",
-    "pet stories",
-  ],
+  keywords: seoKeywords,
   authors: [{ name: "Konjed Stories" }],
   creator: "Konjed Stories",
   publisher: "Konjed Stories",
   alternates: {
     canonical: "/",
+    languages: {
+      en: "/",
+      "x-default": "/",
+    },
   },
   openGraph: {
     title: siteConfig.title,
@@ -48,7 +44,7 @@ export const metadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 900,
-        alt: "Konjed, a cream British Shorthair cat loafing on a patterned rug",
+        alt: "Konjed, a cream British Shorthair cat from Tehran, loafing on a patterned rug",
       },
     ],
     locale: siteConfig.locale,
@@ -61,10 +57,15 @@ export const metadata: Metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        alt: "Konjed, a cream British Shorthair cat loafing on a patterned rug",
+        alt: "Konjed, a cream British Shorthair cat from Tehran, loafing on a patterned rug",
       },
     ],
   },
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
+  manifest: absoluteUrl("/manifest.webmanifest"),
   robots: {
     index: true,
     follow: true,

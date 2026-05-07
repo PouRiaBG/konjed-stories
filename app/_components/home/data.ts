@@ -1,4 +1,4 @@
-export const navItems = ["Home", "About", "Gallery"];
+export const navItems = ["Home", "About", "Gallery", "FAQ"];
 
 export const quickFacts = [
   { label: "Breed", value: "British Shorthair" },
@@ -9,32 +9,32 @@ export const quickFacts = [
 const originalGalleryImages = [
   {
     src: "/images/IMG_7836.webp",
-    alt: "Konjed relaxing on desk",
+    alt: "Konjed the cream British Shorthair cat relaxing on a desk",
     caption: "Desk lounge",
   },
   {
     src: "/images/IMG_6767.webp",
-    alt: "Konjed under chair",
+    alt: "Konjed the British Shorthair cat resting under a chair",
     caption: "Undercover pause",
   },
   {
     src: "/images/IMG_6761.webp",
-    alt: "Konjed stretching",
+    alt: "Cream British Shorthair cat Konjed stretching",
     caption: "Slow stretch",
   },
   {
     src: "/images/IMG_8863.webp",
-    alt: "Konjed on couch",
+    alt: "Konjed, a cream British cat, relaxing on a couch",
     caption: "Soft couch hour",
   },
   {
     src: "/images/IMG_7944.webp",
-    alt: "Konjed portrait",
+    alt: "Portrait of Konjed the British Shorthair cat",
     caption: "Portrait mood",
   },
   {
     src: "/images/IMG_6782.webp",
-    alt: "Konjed at window",
+    alt: "Konjed the Tehran cat watching from a window",
     caption: "Window watch",
   },
 ];
@@ -42,27 +42,27 @@ const originalGalleryImages = [
 const konjedGalleryImages = [
   {
     src: "/images/Konjed-images/IMG_5643.webp",
-    alt: "Konjed loafing on a patterned rug",
+    alt: "Konjed the cream British Shorthair cat loafing on a patterned rug",
     caption: "Little loaf",
   },
   {
     src: "/images/Konjed-images/IMG_5644.webp",
-    alt: "Konjed sitting calmly on a rug",
+    alt: "Cream British Shorthair cat Konjed sitting calmly on a rug",
     caption: "Calm stare",
   },
   {
     src: "/images/Konjed-images/IMG_5645.webp",
-    alt: "Konjed looking up from a patterned rug",
+    alt: "Konjed the British cat looking up from a patterned rug",
     caption: "Bright eyes",
   },
   {
     src: "/images/Konjed-images/IMG_5646.webp",
-    alt: "Konjed resting on a patterned rug",
+    alt: "Konjed, a cream British Shorthair, resting on a patterned rug",
     caption: "Rug pause",
   },
   {
     src: "/images/Konjed-images/IMG_5647.webp",
-    alt: "Konjed loafing on a patterned rug",
+    alt: "Konjed the cream British Shorthair cat loafing on a patterned rug",
     caption: "Hero loaf",
   },
   {
@@ -143,17 +143,17 @@ export const signatureMoments = [
   {
     title: "Desk Supervisor",
     description:
-      "Keeps watch over notebooks, cables, and every quiet afternoon task.",
+      "Keeps watch over notebooks, cables, and every quiet afternoon task like a serious little British cat.",
   },
   {
     title: "Window Regular",
     description:
-      "A calm observer of city light, houseplants, and slow-moving days.",
+      "A calm Tehran cat observing city light, houseplants, and slow-moving days.",
   },
   {
     title: "Soft Presence",
     description:
-      "Cream fur, steady eyes, and the kind of silence that changes a room.",
+      "Cream British Shorthair fur, steady eyes, and the kind of silence that changes a room.",
   },
 ];
 
@@ -161,7 +161,7 @@ export const funFacts = [
   {
     icon: "🐱",
     title: "Breed",
-    fact: "British Shorthair",
+    fact: "British Shorthair Cat",
     featured: true,
   },
   {
@@ -188,5 +188,28 @@ export const funFacts = [
     icon: "🪟",
     title: "Favorite Spot",
     fact: "By the Window",
+  },
+];
+
+export const faqs = [
+  {
+    question: "What kind of cat is Konjed?",
+    answer:
+      "Konjed is a cream British Shorthair cat living in Tehran, Iran, known here for calm photo stories, blue-green eyes, and cozy everyday moments.",
+  },
+  {
+    question: "Is Konjed a British cat?",
+    answer:
+      "Yes. People often search for the breed as British cat, British Shorthair, or British Shorthair cat; Konjed is a cream-colored example of that gentle, plush-coated breed.",
+  },
+  {
+    question: "What makes British Shorthair cats popular?",
+    answer:
+      "British Shorthair cats are loved for their dense plush coats, round faces, calm temperament, and easygoing presence in quiet homes.",
+  },
+  {
+    question: "What cat photos are on Konjed Stories?",
+    answer:
+      "The gallery collects cozy cat photos of Konjed on rugs, near windows, under chairs, and around home: a small visual story of a British Shorthair cat.",
   },
 ];
