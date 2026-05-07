@@ -4,9 +4,10 @@ import Image from "next/image";
 import { useState } from "react";
 import { galleryImages } from "./data";
 
+const visibleSlideOffsets = [-1, 0, 1, 2, 3, 4];
+
 export function GallerySection() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const activeImage = galleryImages[currentSlide];
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % galleryImages.length);
@@ -19,86 +20,91 @@ export function GallerySection() {
   };
 
   return (
-    <section id="gallery" className="bg-background px-5 py-24 sm:px-6">
+    <section id="gallery" className="bg-background px-0 py-20 sm:py-24">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
+        <div className="mb-8 flex flex-col gap-5 px-5 sm:px-6 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-2xl">
             <p className="section-eyebrow mb-4">Gallery</p>
             <h2 className="text-4xl font-bold text-foreground text-balance md:text-5xl">
               Favorite Moments
             </h2>
           </div>
-          <p className="max-w-md text-base leading-relaxed text-muted-foreground">
-            A few quiet snapshots from desk naps, window watching, and Konjed
-            looking entirely too comfortable.
-          </p>
-        </div>
+          <div className="flex items-center gap-3 md:self-start">
+            <button
+              onClick={prevSlide}
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-border bg-card text-2xl leading-none text-foreground shadow-sm transition hover:-translate-x-0.5 hover:border-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+              aria-label="Previous slide"
+            >
+              <span aria-hidden="true">&lsaquo;</span>
+            </button>
 
-        <div className="relative mb-6">
-          <div className="photo-shell relative h-[430px] rounded-[1.25rem] shadow-2xl md:h-[660px]">
-            <Image
-              src={activeImage.src}
-              alt={activeImage.alt}
-              fill
-              sizes="(max-width: 768px) 100vw, 1120px"
-              className="photo-polish object-cover"
-            />
-            <div className="absolute bottom-5 left-5 right-5 flex flex-col gap-3 rounded-lg border border-card/70 bg-card/90 p-4 shadow-lg backdrop-blur sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
-                  {activeImage.caption}
-                </p>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  {currentSlide + 1} of {galleryImages.length}
-                </p>
-              </div>
-              <p className="text-sm font-semibold text-foreground">
-                {activeImage.alt}
-              </p>
-            </div>
+            <button
+              onClick={nextSlide}
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-border bg-card text-2xl leading-none text-foreground shadow-sm transition hover:translate-x-0.5 hover:border-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+              aria-label="Next slide"
+            >
+              <span aria-hidden="true">&rsaquo;</span>
+            </button>
           </div>
-
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 flex h-12 w-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-border bg-background/90 text-lg text-foreground shadow-lg transition-all hover:scale-110 hover:bg-background"
-            aria-label="Previous slide"
-          >
-            &#8592;
-          </button>
-
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 flex h-12 w-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-border bg-background/90 text-lg text-foreground shadow-lg transition-all hover:scale-110 hover:bg-background"
-            aria-label="Next slide"
-          >
-            &#8594;
-          </button>
-
         </div>
 
-        <div className="overflow-x-auto rounded-lg border border-border bg-card/60 p-3 [scrollbar-width:thin]">
-          <div className="flex w-max gap-3">
-            {galleryImages.map((image, index) => (
-              <button
-                key={image.src}
-                onClick={() => setCurrentSlide(index)}
-                className={`h-24 w-24 flex-none cursor-pointer overflow-hidden rounded-lg bg-muted p-0 transition-all sm:h-28 sm:w-36 ${
-                  currentSlide === index
-                    ? "ring-2 ring-foreground opacity-100"
-                    : "ring-2 ring-transparent opacity-65 hover:opacity-100"
-                }`}
-                aria-label={`Show ${image.caption}`}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={180}
-                  height={112}
-                  sizes="(max-width: 640px) 96px, 144px"
-                  className="photo-polish block h-full w-full object-cover"
-                />
-              </button>
-            ))}
+        <div className="overflow-hidden pl-5 sm:pl-6 lg:pl-0">
+          <div className="flex h-[360px] gap-4 sm:h-[430px] md:h-[496px]">
+            {visibleSlideOffsets.map((offset) => {
+              const imageIndex =
+                (currentSlide + offset + galleryImages.length) %
+                galleryImages.length;
+              const image = galleryImages[imageIndex];
+              const isActive = offset === 0;
+
+              return (
+                <button
+                  key={`${image.src}-${offset}`}
+                  onClick={() => setCurrentSlide(imageIndex)}
+                  className={`photo-shell group relative h-full flex-none cursor-pointer rounded-[1.25rem] p-0 text-left shadow-sm transition-[width,opacity,transform] duration-500 ease-out focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground ${
+                    isActive
+                      ? "w-[72vw] max-w-[560px] opacity-100 sm:w-[560px]"
+                      : "w-[32vw] opacity-70 hover:opacity-90 sm:w-[120px]"
+                  }`}
+                  aria-current={isActive ? "true" : undefined}
+                  aria-label={`Show ${image.caption}`}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes={
+                      isActive
+                        ? "(max-width: 640px) 72vw, 560px"
+                        : "(max-width: 640px) 32vw, 120px"
+                    }
+                    className={`photo-polish object-cover transition duration-500 ${
+                      isActive
+                        ? "scale-100 brightness-95"
+                        : "scale-105 grayscale-[30%] brightness-110"
+                    }`}
+                  />
+                  <span
+                    aria-hidden="true"
+                    className={`absolute inset-0 rounded-[inherit] transition duration-500 ${
+                      isActive
+                        ? "bg-[linear-gradient(180deg,rgba(0,0,0,0)_45%,rgba(0,0,0,0.72)_100%)]"
+                        : "bg-background/70 group-hover:bg-background/55"
+                    }`}
+                  />
+                  {isActive ? (
+                    <span className="absolute inset-x-7 bottom-7 block text-white sm:inset-x-8 sm:bottom-8">
+                      <span className="block text-3xl font-bold leading-tight text-balance sm:text-4xl">
+                        {image.caption}
+                      </span>
+                      <span className="mt-4 block max-w-[30rem] text-sm leading-7 text-white/95 sm:text-base">
+                        {image.alt}
+                      </span>
+                    </span>
+                  ) : null}
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>
